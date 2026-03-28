@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vigil Health — Never Miss a Dose Again</title>
+<meta name="description" content="Vigil Health is an offline-first medication safety app built for Nigeria. Intelligent reminders, caregiver alerts, and NAFDAC drug verification. Join the waitlist."/>
+<link rel="stylesheet" href="style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+</head>
+<body>
+
+<div class="blob blob-a" aria-hidden="true"></div>
+<div class="blob blob-b" aria-hidden="true"></div>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar" id="navbar" role="banner">
+  <a class="nav-logo" href="#" aria-label="Vigil Health home">
+    <div class="logo-icon" aria-hidden="true">
+      <svg viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M8 1.5A2.5 2.5 0 005.5 4v6a2.5 2.5 0 005 0V4A2.5 2.5 0 008 1.5zm0-1A3.5 3.5 0 0111.5 4v6a3.5 3.5 0 01-7 0V4A3.5 3.5 0 018 .5z"/>
+        <rect x="7.25" y="3.75" width="1.5" height="3.5" rx=".75"/>
+      </svg>
+    </div>
+    Vigil Health
+  </a>
+  <div class="nav-pill" role="status" aria-label="Early access is now open">
+    <span class="dot" aria-hidden="true"></span>
+    Early Access Open
+  </div>
+</nav>
+
+<main>
+
+<!-- ── HERO ── -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-left">
+    <div class="eyebrow-pill h-ey" aria-label="Built for Nigeria, designed for the world">
+      <span class="dot" aria-hidden="true"></span>
+      Built for Nigeria &nbsp;·&nbsp; Designed for the world
+    </div>
+
+    <h1 class="hero-headline h-hd" id="hero-h">
+      Your phone becomes<br/>
+      your <em>personal nurse.</em>
+    </h1>
+
+    <p class="hero-sub h-sb">
+      Vigil Health is an <strong>offline-first medication safety app</strong> that makes sure every dose is taken, every caregiver is informed, and every medicine is real.
+    </p>
+
+    <div class="form-card h-fm" role="region" aria-label="Waitlist signup form">
+      <div id="fb">
+        <p class="form-title">Join the waitlist</p>
+        <p class="form-sub">Be first when Vigil launches. No spam. Ever.</p>
+        <div class="form-toast" id="h-toast" role="alert" aria-live="assertive"></div>
+        <div class="field">
+          <label for="h-name">Your name</label>
+          <input type="text" id="h-name" placeholder="e.g. Adaeze Okafor" autocomplete="name" aria-required="true"/>
+          <p class="ferr" id="h-ne" role="alert">Please enter your name (at least 2 characters).</p>
+        </div>
+        <div class="field">
+          <label for="h-email">Email address</label>
+          <input type="email" id="h-email" placeholder="you@example.com" autocomplete="email" aria-required="true"/>
+          <p class="ferr" id="h-ee" role="alert">Please enter a valid email address.</p>
+        </div>
+        <span class="role-label">I am joining as...</span>
+        <div class="chips" id="h-chips" role="group" aria-label="Select your role">
+          <button class="chip" data-role="patient" aria-pressed="false" type="button">Patient</button>
+          <button class="chip" data-role="caregiver" aria-pressed="false" type="button">Caregiver</button>
+          <button class="chip" data-role="doctor_nurse" aria-pressed="false" type="button">Doctor / Nurse</button>
+          <button class="chip" data-role="family_member" aria-pressed="false" type="button">Family member</button>
+        </div>
+        <button class="sbtn" id="h-btn" type="button" aria-busy="false">
+          <span class="spinner" aria-hidden="true"></span>
+          <span class="bt">Reserve my spot</span>
+        </button>
+        <p class="pvt">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          Your data is private. NDPA compliant.
+        </p>
+      </div>
+      <div class="success-panel" id="h-ok" role="status" aria-live="polite">
+        <div class="s-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2DBD9B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <p class="s-title">You are on the list.</p>
+        <p class="s-body">We will reach you first when Vigil launches. Thank you for believing in better healthcare.</p>
+        <span class="s-badge" id="h-spot">Spot secured</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right h-ph" aria-hidden="true">
+    <!-- Left phone: splash -->
+    <div class="phone-sm left">
+      <div class="sc-splash">
+        <div class="sc-splash-ic"><svg viewBox="0 0 16 16"><path d="M8 1.5A2.5 2.5 0 005.5 4v6a2.5 2.5 0 005 0V4A2.5 2.5 0 008 1.5zm0-1A3.5 3.5 0 0111.5 4v6a3.5 3.5 0 01-7 0V4A3.5 3.5 0 018 .5z"/><rect x="7.25" y="3.75" width="1.5" height="3.5" rx=".75"/></svg></div>
+        <div class="sc-splash-t">VIGIL</div>
+        <div class="sc-splash-ln"></div>
+        <div class="sc-splash-s">Your medication.<br/>Protected.</div>
+      </div>
+    </div>
+    <!-- Center phone: dose confirmed -->
+    <div class="phone-main">
+      <div class="phone-notch"></div>
+      <div class="sc-dose">
+        <div class="sc-dose-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="sc-dose-tag">Dose Logged</div>
+        <div class="sc-dose-name">Amlodipine 5mg</div>
+        <div class="sc-dose-meta">8:00 AM &nbsp;·&nbsp; Dose 1 of 1</div>
+        <div class="sc-dose-sep"></div>
+        <div class="sc-dose-nafdac">NAFDAC No. A4-0421 &nbsp;·&nbsp; Verified</div>
+        <div class="sc-dose-btn">Confirm Match</div>
+      </div>
+      <div class="sc-dose-nav">
+        <div class="nav-d on"></div><div class="nav-d"></div><div class="nav-d"></div><div class="nav-d"></div>
+      </div>
+    </div>
+    <!-- Right phone: dashboard -->
+    <div class="phone-sm right">
+      <div class="sc-dash">
+        <div class="sc-dash-g">Good morning,</div>
+        <div class="sc-dash-n">Mama Ngozi</div>
+        <div class="sc-dash-card">
+          <div class="sc-dash-m">Amlodipine 5mg</div>
+          <div class="sc-dash-ti">8:00 AM &nbsp;·&nbsp; Take 1 tablet</div>
+          <div class="sc-dash-btn">I have taken this</div>
+        </div>
+        <div class="sc-dash-card">
+          <div class="sc-dash-m">Metformin 500mg</div>
+          <div class="sc-dash-ti">2:00 PM &nbsp;·&nbsp; With lunch</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROOF BAR ── -->
+<div class="proof-bar" role="region" aria-label="Key statistics">
+  <div class="proof-item"><span class="proof-n">50%</span><span class="proof-l">Of Nigerian patients miss critical doses</span></div>
+  <div class="proof-div" aria-hidden="true"></div>
+  <div class="proof-item"><span class="proof-n">41%</span><span class="proof-l">Of drugs in West Africa are counterfeit (WHO)</span></div>
+  <div class="proof-div" aria-hidden="true"></div>
+  <div class="proof-item"><span class="proof-n">100%</span><span class="proof-l">Works offline. No data required.</span></div>
+  <div class="proof-div" aria-hidden="true"></div>
+  <div class="proof-item"><span class="proof-n">SaMD</span><span class="proof-l">Class B clinically validated</span></div>
+</div>
+
+<!-- ── PROBLEM ── -->
+<section class="sec" aria-labelledby="prob-h">
+  <div class="sec-inner">
+    <div class="reveal">
+      <p class="ew teal">The Problem</p>
+      <h2 class="sh" id="prob-h">The gap between the<br/>prescription written<br/>and the medication <em>taken.</em></h2>
+      <p class="sb">In Nigeria, missed doses are not inconveniences. Power cuts, zero mobile data, counterfeit drugs, and complex schedules create a cascade that ends in hospital beds and preventable deaths. Vigil exists to stop that cascade.</p>
+    </div>
+    <div class="pgrid rg">
+      <div class="pcard reveal">
+        <div class="picon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div class="pstat">18hrs</div>
+        <p class="plabel">Average daily power outage in parts of Nigeria, rendering cloud-dependent apps useless.</p>
+      </div>
+      <div class="pcard reveal">
+        <div class="picon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <div class="pstat">41%</div>
+        <p class="plabel">Of drugs in West Africa are substandard or counterfeit, per WHO estimates.</p>
+      </div>
+      <div class="pcard reveal">
+        <div class="picon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="pstat">68%</div>
+        <p class="plabel">Of hospital readmissions in Sub-Saharan Africa are linked to medication non-adherence.</p>
+      </div>
+      <div class="pcard reveal">
+        <div class="picon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.64 13.1 19.79 19.79 0 011.56 4.48 2 2 0 013.53 2.25h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.78a16 16 0 006.29 6.29l1.07-.88a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div class="pstat">Daily</div>
+        <p class="plabel">Families make daily check-in calls just to confirm a loved one took their medication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="how-sec" aria-labelledby="how-h">
+  <div class="sec-inner">
+    <div class="reveal">
+      <p class="ew dim">How It Works</p>
+      <h2 class="sh lt" id="how-h">Simple for patients.<br/><em>Powerful</em> under the hood.</h2>
+      <p class="sb lt">Vigil works without internet. Without power. Without excuses.</p>
+    </div>
+    <div class="sgrid rg">
+      <div class="scard reveal">
+        <div class="snum" aria-hidden="true">01</div>
+        <div class="siw" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+        <h3 class="stitle">Scan your medicine</h3>
+        <p class="sdesc">Point your phone at the packaging. Vigil reads the NAFDAC number and verifies authenticity on-device. No internet required.</p>
+        <span class="sbadge">Offline OCR</span>
+      </div>
+      <div class="scard reveal">
+        <div class="snum" aria-hidden="true">02</div>
+        <div class="siw" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div>
+        <h3 class="stitle">Reminders fire reliably</h3>
+        <p class="sdesc">Adaptive alerts that work when NEPA takes the light. Local triggers. Zero cloud dependency. Your schedule never sleeps.</p>
+        <span class="sbadge">Works offline</span>
+      </div>
+      <div class="scard reveal">
+        <div class="snum" aria-hidden="true">03</div>
+        <div class="siw" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <h3 class="stitle">Confirm or Vigil escalates</h3>
+        <p class="sdesc">Tap to confirm. If you do not, Vigil texts your caregiver, calls you, then alerts your care team. Silence is never acceptable.</p>
+        <span class="sbadge">Escalation cascade</span>
+      </div>
+      <div class="scard reveal">
+        <div class="snum" aria-hidden="true">04</div>
+        <div class="siw" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3 class="stitle">Your caregiver stays informed</h3>
+        <p class="sdesc">Family members get real-time updates. No more morning check-in calls. The app reports so they can stop worrying.</p>
+        <span class="sbadge">Caregiver sync</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHO WE SERVE ── -->
+<section class="sec" aria-labelledby="serve-h">
+  <div class="sec-inner">
+    <div class="reveal">
+      <p class="ew teal">Who We Serve</p>
+      <h2 class="sh" id="serve-h">Built for real people<br/>in <em>real conditions.</em></h2>
+      <p class="sb">Three kinds of people. One shared fear. Vigil addresses them all.</p>
+    </div>
+    <div class="pergrid rg">
+      <div class="percard reveal">
+        <div class="perav" style="background:var(--color-teal-pale)" aria-hidden="true">
+          <svg viewBox="0 0 24 24" stroke="#2DBD9B"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <p class="pertag">Chronic Patient</p>
+        <h3 class="pername">Baba Emmanuel</h3>
+        <p class="perq">He takes 3 medications daily for hypertension and diabetes. He needs reminders that fire at 6am whether NEPA came back or not. Vigil is the one thing that does not fail him.</p>
+        <div class="perchips"><span class="pchip">Offline reminders</span><span class="pchip">Complex schedule</span></div>
+      </div>
+      <div class="percard reveal">
+        <div class="perav" style="background:rgba(245,158,11,0.1)" aria-hidden="true">
+          <svg viewBox="0 0 24 24" stroke="#D97706"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 010 16 8 8 0 010-16z"/><path d="M12 22v-4"/></svg>
+        </div>
+        <p class="pertag">Remote Caregiver</p>
+        <h3 class="pername">Adaeze in London</h3>
+        <p class="perq">Her mother is in Enugu on heart medication. She cannot be there physically, but Vigil tells her the dose was taken. Peace of mind, not anxiety. She stopped calling every morning.</p>
+        <div class="perchips"><span class="pchip">SMS updates</span><span class="pchip">Escalation alerts</span></div>
+      </div>
+      <div class="percard reveal">
+        <div class="perav" style="background:rgba(11,20,55,0.06)" aria-hidden="true">
+          <svg viewBox="0 0 24 24" stroke="#0B1437"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <p class="pertag">Doctor / Nurse</p>
+        <h3 class="pername">Dr. Chukwuemeka</h3>
+        <p class="perq">He discharges patients from LUTH with complex schedules. Now Vigil continues the adherence protocol after they leave the ward. He sees the audit trail. He trusts the data.</p>
+        <div class="perchips"><span class="pchip">Audit trail</span><span class="pchip">Adherence reports</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── APP SCREENS ── -->
+<section class="screens-sec" aria-labelledby="screens-h">
+  <div class="sec-inner">
+    <div class="reveal">
+      <p class="ew dim">The Product</p>
+      <h2 class="sh lt" id="screens-h">A real app.<br/>Built for <em>real conditions.</em></h2>
+      <p class="sb lt">Not a concept. Not a prototype. Vigil is production-ready, NAFDAC-verified, and designed to work when everything else fails.</p>
+    </div>
+  </div>
+  <div class="screens-row reveal" role="region" aria-label="App screen previews">
+    <!-- Splash -->
+    <div class="sc-item">
+      <div class="phone-sh">
+        <div class="scs-splash">
+          <div class="scs-ic"><svg viewBox="0 0 16 16"><path d="M8 1.5A2.5 2.5 0 005.5 4v6a2.5 2.5 0 005 0V4A2.5 2.5 0 008 1.5zm0-1A3.5 3.5 0 0111.5 4v6a3.5 3.5 0 01-7 0V4A3.5 3.5 0 018 .5z"/><rect x="7.25" y="3.75" width="1.5" height="3.5" rx=".75"/></svg></div>
+          <div class="scs-t">VIGIL</div>
+          <div class="scs-ln"></div>
+          <div class="scs-s">Your medication.<br/>Protected.</div>
+        </div>
+      </div>
+      <p class="sc-cap">Welcome</p>
+    </div>
+    <!-- Dose confirmed (featured) -->
+    <div class="sc-item feat">
+      <div class="phone-sh">
+        <div class="scs-dose">
+          <div class="scs-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="scs-dl">Dose Logged</div>
+          <div class="scs-dn">Amlodipine 5mg</div>
+          <div class="scs-dm">8:00 AM &nbsp;·&nbsp; Dose 1 of 1</div>
+          <div class="scs-nf">NAFDAC No. A4-0421</div>
+          <div class="scs-b">Confirm Match</div>
+        </div>
+      </div>
+      <p class="sc-cap">Dose Confirmed</p>
+    </div>
+    <!-- Scan -->
+    <div class="sc-item">
+      <div class="phone-sh">
+        <div class="scs-scan">
+          <div style="font-size:8px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.06em;">Scan Box</div>
+          <div class="scs-box"></div>
+          <div class="scs-scan-lbl">Place barcode inside the box</div>
+          <div class="scs-scan-btn">Type name instead</div>
+        </div>
+      </div>
+      <p class="sc-cap">NAFDAC Scan</p>
+    </div>
+    <!-- Dashboard -->
+    <div class="sc-item">
+      <div class="phone-sh">
+        <div class="scs-dash">
+          <div class="scs-dg">Good morning, Mama Ngozi</div>
+          <div class="scs-dn2">Next: Amlodipine 5mg</div>
+          <div class="scs-dc">
+            <div class="scs-dm2">Amlodipine 5mg</div>
+            <div class="scs-dt">8:00 AM &nbsp;·&nbsp; Take 1 tablet</div>
+            <div class="scs-dtk">I have taken this</div>
+          </div>
+          <div class="scs-dltr">Later Today</div>
+          <div class="scs-dp"><span>Metformin 500mg</span><span style="color:var(--color-amber);font-size:6px;">2:00 PM</span></div>
+          <div class="scs-dp"><span>Atorvastatin</span><span style="font-size:6px;color:var(--color-text-muted);">9:00 PM</span></div>
+        </div>
+      </div>
+      <p class="sc-cap">Home Dashboard</p>
+    </div>
+    <!-- Patient adherence -->
+    <div class="sc-item">
+      <div class="phone-sh">
+        <div class="scs-pat">
+          <div class="scs-pt">Today's Summary</div>
+          <div class="scs-pp">
+            <div class="scs-prow"><span style="font-size:7px;font-weight:600;color:var(--color-navy)">3 of 5 doses taken</span><span style="font-size:7px;font-weight:700;color:var(--color-teal-dark)">80%</span></div>
+            <div class="scs-pbg"><div class="scs-pf"></div></div>
+          </div>
+          <div class="scs-pm"><span class="scs-pmn">Amlodipine 5mg</span><span class="scs-ps tk">Taken</span></div>
+          <div class="scs-pm"><span class="scs-pmn">Lisinopril 10mg</span><span class="scs-ps pd">Pending</span></div>
+          <div class="scs-pm"><span class="scs-pmn">Metformin 500mg</span><span class="scs-ps tk">Taken</span></div>
+        </div>
+      </div>
+      <p class="sc-cap">Adherence View</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── BOTTOM CTA ── -->
+<section class="btm-cta" aria-labelledby="cta-h">
+  <div class="reveal">
+    <h2 class="btm-title" id="cta-h">Do not let a missed dose<br/>be a crisis.</h2>
+    <p class="btm-sub">Join thousands of Nigerians taking control of their medication. Vigil is coming.</p>
+    <div class="btm-form" id="btm-wrap">
+      <input type="email" id="btm-email" placeholder="your@email.com" autocomplete="email" aria-label="Email address"/>
+      <button class="btm-btn" id="btm-btn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+        Join the waitlist
+      </button>
+    </div>
+    <p class="btm-ok" id="btm-ok" role="status" aria-live="polite">You are on the list. We will be in touch soon.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer role="contentinfo">
+  <div class="ft-logo">Vigil Health</div>
+  <p class="ft-tag">Built for Nigeria. Designed for the world.</p>
+  <div class="ft-bgs">
+    <span class="ft-bg">NDPA Compliant</span>
+    <span class="ft-bg">SaMD Class B</span>
+  </div>
+  <p class="ft-copy">&copy; 2025 Vigil Health. All rights reserved. &nbsp;·&nbsp; vigilhealth.com</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
