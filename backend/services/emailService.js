@@ -72,7 +72,7 @@ function buildEmailHTML(name, spotNumber, role) {
           <tr>
             <td style="background-color:#FFFFFF;padding:40px 40px 32px;border-left:1px solid #E4E7EC;border-right:1px solid #E4E7EC;">
               <h1 style="margin:0 0 16px;font-family:Georgia,serif;font-size:28px;font-weight:700;color:#0B1437;line-height:1.2;">
-                Hello, ${firstName}! &#128075;
+                Hello, ${firstName}! 🤗;
               </h1>
               <p style="margin:0 0 24px;font-size:16px;color:#374151;line-height:1.7;">
                 You are now on the Vigil Health waitlist. You are among the first to know when we launch.
@@ -135,7 +135,7 @@ function buildEmailHTML(name, spotNumber, role) {
           <!-- CTA -->
           <tr>
             <td style="background-color:#0B1437;padding:28px 40px;text-align:center;border-left:1px solid #0B1437;border-right:1px solid #0B1437;">
-              <p style="margin:0 0 4px;font-size:13px;color:rgba(255,255,255,0.5);">Questions? Reach us at</p>
+              <p style="margin:0 0 4px;font-size:13px;color:rgba(255,255,255,0.5);">Questions? Reach out to Alex, our customer support agent at</p>
               <a href="mailto:xand3r2297@gmail.com" style="font-size:14px;font-weight:600;color:#2DBD9B;text-decoration:none;">xand3r2297@gmail.com</a>
             </td>
           </tr>
@@ -147,7 +147,7 @@ function buildEmailHTML(name, spotNumber, role) {
                 &copy; 2025 Vigil Health. All rights reserved.
               </p>
               <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.18);">
-                You are receiving this because you signed up at vigilhealth.com.<br/>
+                You are receiving this because you signed up at vigilhealth-waitlist.vercel.app.<br/>
                 NDPA Compliant &nbsp;&middot;&nbsp; SaMD Class B
               </p>
             </td>
