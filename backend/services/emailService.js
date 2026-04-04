@@ -72,7 +72,7 @@ function buildEmailHTML(name, spotNumber, role) {
           <tr>
             <td style="background-color:#FFFFFF;padding:40px 40px 32px;border-left:1px solid #E4E7EC;border-right:1px solid #E4E7EC;">
               <h1 style="margin:0 0 16px;font-family:Georgia,serif;font-size:28px;font-weight:700;color:#0B1437;line-height:1.2;">
-                Hello, ${firstName}! 🤗;
+                Hello, ${firstName}! 🤗
               </h1>
               <p style="margin:0 0 24px;font-size:16px;color:#374151;line-height:1.7;">
                 You are now on the Vigil Health waitlist. You are among the first to know when we launch.
