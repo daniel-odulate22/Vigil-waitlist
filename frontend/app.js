@@ -2,14 +2,13 @@
 'use strict';
 
 /* ── API base URL ──────────────────────────────────────────────
-   Auto-detects local vs production.
-   After deploying to Railway, replace YOUR-RAILWAY-URL below
-   with your actual Railway domain. Example:
-   'https://vigil-backend-production.up.railway.app'
+   Same domain on Vercel — no CORS, no absolute URLs needed.
+   In production API_BASE is empty string so /api/waitlist works.
+   Local dev still points to your Express server on port 5001.
    ──────────────────────────────────────────────────────────── */
 var API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
   ? 'http://localhost:5001'
-  : 'https://YOUR-RAILWAY-URL.up.railway.app';
+  : '';
 
 /* ── Navbar scroll ── */
 var nav=document.getElementById('navbar'),tick=false;
