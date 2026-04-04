@@ -13,9 +13,9 @@ app.use(helmet());
 // In development, CLIENT_URL is your local HTML file server
 // In production, set CLIENT_URL to your deployed frontend domain
 const allowedOrigins = [
-  process.env.CLIENT_URL || 'http://127.0.0.1:5500',
+  process.env.CLIENT_URL || 'https://vigilhealth-waitlist.vercel.app',
   'http://localhost:5500',
-  'http://127.0.0.1:5500',
+  'https://vigilhealth-waitlist.vercel.app',
   // Add your production domain here when you deploy, e.g.:
   // 'https://vigilhealth.com',
 ];

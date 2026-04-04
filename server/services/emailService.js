@@ -72,10 +72,10 @@ function buildEmailHTML(name, spotNumber, role) {
           <tr>
             <td style="background-color:#FFFFFF;padding:40px 40px 32px;border-left:1px solid #E4E7EC;border-right:1px solid #E4E7EC;">
               <h1 style="margin:0 0 16px;font-family:Georgia,serif;font-size:28px;font-weight:700;color:#0B1437;line-height:1.2;">
-                You are on the list, ${firstName}.
+                Hello, ${firstName}! &#128075;
               </h1>
               <p style="margin:0 0 24px;font-size:16px;color:#374151;line-height:1.7;">
-                Thank you for joining the Vigil Health waitlist. You are among the first to know when we launch.
+                You are now on the Vigil Health waitlist. You are among the first to know when we launch.
               </p>
 
               <!-- Spot badge -->
@@ -136,7 +136,7 @@ function buildEmailHTML(name, spotNumber, role) {
           <tr>
             <td style="background-color:#0B1437;padding:28px 40px;text-align:center;border-left:1px solid #0B1437;border-right:1px solid #0B1437;">
               <p style="margin:0 0 4px;font-size:13px;color:rgba(255,255,255,0.5);">Questions? Reach us at</p>
-              <a href="mailto:hello@vigilhealth.com" style="font-size:14px;font-weight:600;color:#2DBD9B;text-decoration:none;">hello@vigilhealth.com</a>
+              <a href="mailto:xand3r2297@gmail.com" style="font-size:14px;font-weight:600;color:#2DBD9B;text-decoration:none;">xand3r2297@gmail.com</a>
             </td>
           </tr>
 
@@ -144,7 +144,7 @@ function buildEmailHTML(name, spotNumber, role) {
           <tr>
             <td style="background-color:#070E2B;border-radius:0 0 14px 14px;padding:20px 40px;text-align:center;">
               <p style="margin:0 0 6px;font-size:12px;color:rgba(255,255,255,0.25);">
-                &copy; 2025 Vigil Health &nbsp;&middot;&nbsp; vigilhealth.com
+                &copy; 2025 Vigil Health. All rights reserved.
               </p>
               <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.18);">
                 You are receiving this because you signed up at vigilhealth.com.<br/>
@@ -167,12 +167,16 @@ function buildEmailText(name, spotNumber, role) {
   const roleLabel = roleLabels[role] || 'Early Supporter';
   const firstName = name.split(' ')[0];
   return `
-Hi ${firstName},
+Hello ${firstName} 🤗
 
-You are on the Vigil Health waitlist.
+It's truly an honour to had you join.
+
+You are now on the Vigil Health waitlist 😉
 
 Waitlist position: #${spotNumber}
 Joining as: ${roleLabel}
+
+Like duolingo but for your medication except if you miss a streak, <strong>it coulld cost you your life</strong>. No biggie 😉
 
 Vigil Health is an offline-first medication safety app built for Nigeria. We make sure every dose is taken, every caregiver is informed, and every medicine is real.
 
@@ -180,7 +184,7 @@ We are preparing for our pilot launch. You will hear from us before anyone else.
 
 Built for Nigeria. Designed for the world.
 
-Questions? Email us at hello@vigilhealth.com
+Questions? Email us at xand3r2297@gmail.com
 
 -- Vigil Health Team
   `.trim();
