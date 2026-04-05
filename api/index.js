@@ -1,20 +1,23 @@
-// This is the Vercel Serverless Function entry point.
-// Vercel calls this file on every /api/* request.
-// It wraps your existing Express app — no rewrite needed.
+// Vercel Serverless Function entry point.
+// Vercel injects environment variables automatically in production.
+// dotenv is only needed locally — this handles both cases safely.
+try { require('dotenv').config(); } catch (e) {}
 
-require('dotenv').config();
 const app = require('../backend/app');
 const connectDB = require('../backend/config/db');
 
-// Cache the DB connection across serverless invocations.
-// Without this, every request would open a new MongoDB connection
-// and you would hit Atlas's connection limit very quickly.
 let isConnected = false;
 
 module.exports = async (req, res) => {
-  if (!isConnected) {
-    await connectDB();
-    isConnected = true;
+  try {
+    if (!isConnected) {
+      await connectDB();
+      isConnected = true;
+    }
+  } catch (err) {
+    console.error('DB connection failed in serverless fn:', err.message);
+    return res.status(500).json({ success: false, message: 'Database connection failed.' });
   }
+
   return app(req, res);
 };
