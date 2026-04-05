@@ -1,12 +1,18 @@
 const nodemailer = require('nodemailer');
 
 // ── Transporter ──────────────────────────────────────────────
-// Uses Gmail SMTP with App Password (not your real Gmail password)
+// Using explicit SMTP config instead of service:'gmail' shorthand.
+// This avoids connection timeouts on some Windows/network setups.
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false,        // true for port 465, false for 587 (STARTTLS)
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false, // allows self-signed certs on some networks
   },
 });
 
@@ -167,16 +173,12 @@ function buildEmailText(name, spotNumber, role) {
   const roleLabel = roleLabels[role] || 'Early Supporter';
   const firstName = name.split(' ')[0];
   return `
-Hello ${firstName} 🤗
+Hi ${firstName},
 
-It's truly an honour to had you join.
-
-You are now on the Vigil Health waitlist 😉
+You are on the Vigil Health waitlist.
 
 Waitlist position: #${spotNumber}
 Joining as: ${roleLabel}
-
-Like duolingo but for your medication except if you miss a streak, <strong>it coulld cost you your life</strong>. No biggie 😉
 
 Vigil Health is an offline-first medication safety app built for Nigeria. We make sure every dose is taken, every caregiver is informed, and every medicine is real.
 
@@ -184,7 +186,7 @@ We are preparing for our pilot launch. You will hear from us before anyone else.
 
 Built for Nigeria. Designed for the world.
 
-Questions? Email us at xand3r2297@gmail.com
+Questions? Email us at hello@vigilhealth.com
 
 -- Vigil Health Team
   `.trim();
