@@ -2,7 +2,7 @@
 
 # Vigil Health — Waitlist
 
-**It's like Doulingo but for your medication...except if you miss a streak, it could cost you your life**
+**It's like Doulingo but for your medication...except if you miss a streak, it could cost you your life.**   
 **An offline-first medication safety platform built for Nigeria, designed for the world.**
 
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/) [![Express](https://img.shields.io/badge/Express-4.x-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/) [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://mongodb.com/) [![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com/) [![License](https://img.shields.io/badge/License-MIT-2DBD9B?style=flat-square)](https://claude.ai/chat/LICENSE)
